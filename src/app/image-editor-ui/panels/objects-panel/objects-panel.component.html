@@ -1,0 +1,158 @@
+<div class="header">
+    <div class="name" trans>Objects</div>
+    <button class="close-button" mat-icon-button (click)="panelRef.close()">
+        <mat-icon svgIcon="close"></mat-icon>
+    </button>
+</div>
+<div class="items-list" customScrollbar cdkDropList (cdkDropListDropped)="reorderObjects($event)">
+    <div
+    class="reorder-item-wrapper drag-item"
+    *ngFor="let object of objects.getAll()"
+    cdkDrag
+    [cdkDragData]="object.data.id"
+    cdkDragBoundary=".items-list"
+    cdkDragLockAxis="y"
+    [cdkDragDisabled]="shouldDisableObject(object)"
+    >
+    <div class="floating-panel-item"
+    (click)="selectObject(object)"
+    [class.disabled]="shouldDisableObject(object)"
+    [class.active]="(activeObjId$ | async) === object.data.id"
+    [attr.data-id]="object.data.id"
+    >
+    <div class="align-img-label">
+        <mat-icon [svgIcon]="getIcon(object)" class="list-icon"></mat-icon>
+        <div class="name" trans>{{getObjectDisplayName(object)}}</div>
+        <div class="drag-preview" *cdkDragPreview></div>
+        <div class="drag-placeholder" *cdkDragPlaceholder>
+            <div class="placeholder-inner"></div>
+        </div>
+    </div>
+    <div class="tools-tabs" trans *ngIf="getObjectDisplayName(object)=='image'">
+        <ul class="tools-tabs-head">
+            <li class="tools-item active" (click)="setTollbar('tone')">
+                <div class="img-item-option">
+                    Tone
+                </div>
+            </li>
+            <li class="tools-item" (click)="setTollbar('blend')" >
+                <div class="img-item-option">
+                    Blend
+                </div>
+            </li>
+            <li class="tools-item" (click)="setTollbar('eraser')">
+                <div class="item-option">
+                    Eraser
+                </div>
+            </li>
+            <li class="tools-item" (click)="setTollbar('position')">
+                <div class="item-option">
+                    Position
+                </div>
+            </li>
+            <li class="tools-item" (click)="setTollbar('gradient')">
+                <div class="item-option">
+                    Gradient
+                </div>
+            </li>
+        </ul>
+        <div class="tools-content" *ngIf="getTollbar('tone')">
+            <div class="tool-tab">
+                <div class="filter-input">
+                    <label>
+                        <input type="checkbox" name="saturation" class="saturation" (change)="applyAffects($event, 'saturation')">
+                        Saturation   
+                    </label> 
+                    <div class=filter-input>
+                        <input type="range" id="saturation-value" 
+                        class="form-control-range filter-range"  value="0" min="-1" max="1" step="0.003921" [(ngModel)]="saturation" (change)="applyRangeValue($event, 'saturation')" [disabled]="saturationDisabled">
+                    </div>
+                </div>
+                <div class="filter-input">
+                    <label>
+                        <input type="checkbox" name="hue" class="hue" (change)="applyAffects($event, 'hue')">
+                        Hue   
+                    </label> 
+                    <div class=filter-input>
+                        <input type="range" id="hue-value" 
+                        class="form-control-range filter-range"  value="0" min="-1" max="1" step="0.003921" [(ngModel)]="hue" (change)="applyRangeValue($event, 'hue')" [disabled]="hueDisabled">
+
+                    </div>
+                </div>
+                <div class="filter-input">
+                    <label>
+                        <input type="checkbox" name="opacity" class="opacity" (change)="applyAffects($event, 'opacity')">
+                        Opacity   
+                    </label> 
+                    <div class=filter-input>
+                        <input type="range" id="opacity-value" 
+                        class="form-control-range filter-range"  value="0.5" min="0" max="1" step="0.003921" [(ngModel)]="opacity" (change)="applyRangeValue($event, 'opacity')" [disabled]="opacityDisabled">
+
+                    </div>
+                </div>
+                <div class="filter-input">
+                    <label>
+                        <input type="checkbox" name="brightness" class="brightness" (change)="applyAffects($event, 'brightness')" >
+                        Brightness   
+                    </label> 
+                    <div class=filter-input>
+                        <input type="range" id="brightness-value" 
+                        class="form-control-range filter-range"  value="0" min="-1" max="1" step="0.003921" (change)="applyRangeValue($event, 'brightness')" [(ngModel)]="brightness" [disabled]="brightnessDisabled" >
+
+                    </div>
+                </div>
+                <div class="filter-input">
+                    <label>
+                        <input type="checkbox" name="contrast" class="contrast" (change)="applyAffects($event, 'contrast')">
+                        Contrast   
+                    </label> 
+                    <div class=filter-input>
+                        <input type="range" id="contrast-value" 
+                        class="form-control-range filter-range"  value="0" min="-1" max="1" step="0.003921" (change)="applyRangeValue($event, 'contrast')" [(ngModel)]="contrast" [disabled]="contrastDisabled">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tools-content" *ngIf="getTollbar('blend')">
+            <label><span>Blend Color:</span> 
+                <input type="checkbox" id="blend" (change)="applyBlend($event,'blend')" ></label>
+                <br>
+                <label>Mode:</label>
+                <select id="blend-mode" name="blend-mode" (change)="applyBlend($event,'blend-mode')" [(ngModel)]="blendMode">
+                  <option selected="" value="add">Add</option>
+                  <option value="diff">Diff</option>
+                  <option value="subtract">Subtract</option>
+                  <option value="multiply">Multiply</option>
+                  <option value="screen">Screen</option>
+                  <option value="lighten">Lighten</option>
+                  <option value="darken">Darken</option>
+                  <option value="overlay">Overlay</option>
+                  <option value="exclusion">Exclusion</option>
+                  <option value="tint">Tint</option>
+              </select>
+              <br>
+              <label>Color: <input type="color" id="blend-color" value="#00f900"  (change)="applyBlend($event,'blend-color')" [(ngModel)]="blendColor"></label><br>
+              <label>Opcity: <input type="range" id="blend-alpha" min="0" max="1" value="1" step="0.01" (change)="applyBlend($event,'blend-alpha')" [(ngModel)]="blendOpacity"></label><br>
+
+          </div> 
+          <div class="tools-content" *ngIf="getTollbar('eraser')">
+           <label>Eraser</label>
+           <label>
+            <input type="checkbox" class="revert">
+            Revert
+        </label>
+        <label>Eraser Size: <input type="range" min="0" max="1" value="0.5" step="0.01" id="eraser-color" (change)="applyEraser($event,'eraser-color')" [(ngModel)]="eraserSize"></label><br>
+        <label>Eraser Strength:  <input type="range" min="0" max="1" value="0.5" step="0.01" id="eraser-Strength" (change)="applyEraser($event,'eraser-Strength')" [(ngModel)]="eraserStrength"></label><br>
+        <label>Eraser Harshness: <input type="range" min="0" max="1" value="1" step="0.01" id="eraser-harshness" (change)="applyEraser($event,'eraser-harshness')" [(ngModel)]="eraserHarshness"></label><br>
+    </div>
+    <div class="tools-content" *ngIf="getTollbar('position')">
+        position
+    </div>
+    <div class="tools-content" *ngIf="getTollbar('gradient')">
+        gradient
+    </div>
+</div> 
+</div>
+</div>
+</div>

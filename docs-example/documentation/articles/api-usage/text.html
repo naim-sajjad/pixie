@@ -1,0 +1,242 @@
+<html lang="en">
+<head>
+    <title>Text</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="../../assets/styles/docs-global.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-sidenav.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-content.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-article.css">
+    <link rel="stylesheet" href="../../assets/styles/article-content.css">
+    <script src="../../assets/docs-scripts.js"></script>
+</head>
+<body>
+<nav class="hc-content-navbar">
+    <div class="nav-title">Documentation</div>
+    <a class="submit-ticket" href="https://support.vebto.com/help-center/tickets/new">Create a ticket</a>
+</nav>
+
+<div class="hc-content">
+    <div class="hc-sidenav left">
+            <h3 class="highlight-item introduction">Introduction</h3>
+        <ul>
+                            <li>
+                    <a href="../introduction/translations.html" class="highlight-item translations">Translations</a>
+                </li>
+                            <li>
+                    <a href="../introduction/interface.html" class="highlight-item interface">Interface</a>
+                </li>
+                            <li>
+                    <a href="../introduction/getting-started.html" class="highlight-item getting-started">Getting Started</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item configuration">Configuration</h3>
+        <ul>
+                            <li>
+                    <a href="../configuration/theming.html" class="highlight-item theming">Theming</a>
+                </li>
+                            <li>
+                    <a href="../configuration/filter-texture-size.html" class="highlight-item filter-texture-size">Filter Texture Size</a>
+                </li>
+                            <li>
+                    <a href="../configuration/cross-origin-images.html" class="highlight-item cross-origin-images">Cross Origin Images</a>
+                </li>
+                            <li>
+                    <a href="../configuration/specifying-base-url.html" class="highlight-item specifying-base-url">Specifying Base Url</a>
+                </li>
+                            <li>
+                    <a href="../configuration/default-settings.html" class="highlight-item default-settings">Default Settings</a>
+                </li>
+                            <li>
+                    <a href="../configuration/available-settings.html" class="highlight-item available-settings">Available Settings</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item examples">Examples</h3>
+        <ul>
+                            <li>
+                    <a href="../examples/resetting-editor.html" class="highlight-item resetting-editor">Resetting Editor</a>
+                </li>
+                            <li>
+                    <a href="../examples/watermarking-photos.html" class="highlight-item watermarking-photos">Watermarking Photos</a>
+                </li>
+                            <li>
+                    <a href="../examples/editor-as-overlay.html" class="highlight-item editor-as-overlay">Editor as Overlay</a>
+                </li>
+                            <li>
+                    <a href="../examples/opening-photos.html" class="highlight-item opening-photos">Opening Photos</a>
+                </li>
+                            <li>
+                    <a href="../examples/saving-to-server.html" class="highlight-item saving-to-server">Saving to Server</a>
+                </li>
+                            <li>
+                    <a href="../examples/loading-state.html" class="highlight-item loading-state">Loading State</a>
+                </li>
+                            <li>
+                    <a href="../examples/saving-state.html" class="highlight-item saving-state">Saving State</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item api-usage">API Usage</h3>
+        <ul>
+                            <li>
+                    <a href="../api-usage/general-api.html" class="highlight-item general-api">General API</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/import.html" class="highlight-item import">Import</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/using-tools.html" class="highlight-item using-tools">Using Tools</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/export.html" class="highlight-item export">Export</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/frame.html" class="highlight-item frame">Frame</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/stickers.html" class="highlight-item stickers">Stickers</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/shapes.html" class="highlight-item shapes">Shapes</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/text.html" class="highlight-item text">Text</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/draw.html" class="highlight-item draw">Draw</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/transform.html" class="highlight-item transform">Transform</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/crop.html" class="highlight-item crop">Crop</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/resize.html" class="highlight-item resize">Resize</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/filter.html" class="highlight-item filter">Filter</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/history.html" class="highlight-item history">History</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item objects">Objects</h3>
+        <ul>
+                            <li>
+                    <a href="../objects/events.html" class="highlight-item events">Events</a>
+                </li>
+                            <li>
+                    <a href="../objects/active-object.html" class="highlight-item active-object">Active Object</a>
+                </li>
+                            <li>
+                    <a href="../objects/object-list.html" class="highlight-item object-list">Object List</a>
+                </li>
+                    </ul>
+    </div>    <div class="center">
+        <section class="article-container">
+            <h1 class="article-title">Text</h1>
+            <div class="article-body">
+                <p class="article-description">Text tool can be used to add text of various fonts, colors and sizes to the photo.</p>
+<pre><code class="language-javascript">var pixie = new Pixie({
+    onLoad: function() {
+        pixie.getTool('text').add('my text');
+    }
+});</code></pre>
+<div class="img-container"><img src="../../assets/images/article-images/yK6OG0uJfKRFEFtBY4AbLX2olH23BNaFUDU7Kg6r.png"></div>
+<h2 id="adding-custom-fonts"><a href="#adding-custom-fonts">Adding custom fonts</a></h2>
+<p>To add custom fonts, pass them using the text tool <code>items</code> option. Ratio previews in pixie interface will be generated automatically based on ratios given.</p>
+<p>If <code>replaceDefault</code> is set to <code>true</code>, all default fonts (including google fonts) are removed. If it is set to <code>false</code>, your additional fonts are appended.</p>
+<p>Default category of fonts picker can be specified with <code>defaultCategory</code> option.</p>
+<pre><code class="language-javascript">var pixie = new Pixie({
+	tools: {
+		text: {
+			replaceDefault: false,
+			defaultCategory: 'handwriting',
+			items: [
+				{
+					family: 'Roboto',
+					category: 'serif',
+					filePath: '/robot.ttf',
+					type: 'custom'
+				},
+				{
+					family: 'Lato',
+					category: 'sans-serif',
+					type: 'google',
+				}
+			]
+		}
+	}
+})</code></pre>
+<h2 id="google-fonts-api"><a href="#google-fonts-api">Google fonts API</a></h2>
+<p>If google fonts are used within editor, you will need to specific your google fonts API key via <code>googleFontsApiKey</code> config option.</p>
+<h2 id="text-tool-methods"><a href="#text-tool-methods">Text tool methods</a></h2>
+<section class="tsd-panel-group tsd-member-group "><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="add"></a>
+<h3 id="add">add</h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/tools/text/text-tool.service.ts:33</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Add a new text object to canvas.</p>
+</div>
+</div>
+<h4 class="tsd-parameters-title" id="parameters">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="ltspan-classquottsd-flag-ts-flagdefault-valuequotgtdefault-valueltspangt-text-ltspan-classquottsd-signature-typequotgtstringltspangtltspan-classquottsd-signature-symbolquotgt-nbspquotdouble-click-herequotltspangt"><span class="tsd-flag ts-flagDefault value">Default value</span> text: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = "Double click here"</span></h5>
+</li>
+</ul><h4 class="tsd-returns-title" id="returns-ltspan-classquottsd-signature-typequotgtvoidltspangt">Returns <span class="tsd-signature-type">void</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="getstyle"></a>
+<h3 id="getltwbrgtstyle">get<wbr>Style</wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">get<wbr>Style<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/tools/text/text-tool.service.ts:26</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Get specified style property of text.</p>
+</div>
+</div>
+<h4 class="tsd-parameters-title" id="parameters">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="name-ltspan-classquottsd-signature-typequotgtstringltspangt">name: <span class="tsd-signature-type">string</span></h5>
+</li>
+</ul><h4 class="tsd-returns-title" id="returns-ltspan-classquottsd-signature-typequotgtstringltspangt-ltspan-classquottsd-signature-symbolquotgt-ltspangt-ltspan-classquottsd-signature-typequotgtnumberltspangt">Returns <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol"> | </span> <span class="tsd-signature-type">number</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="getusedfonts"></a>
+<h3 id="getltwbrgtusedltwbrgtfonts">get<wbr>Used<wbr>Fonts</wbr></wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">get<wbr>Used<wbr>Fonts<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a class="tsd-signature-type">FontItem</a><span class="tsd-signature-symbol">[]</span></wbr></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/tools/text/text-tool.service.ts:95</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Get all custom fonts used on canvas.</p>
+</div>
+</div>
+<h4 class="tsd-returns-title" id="returns-lta-classquottsd-signature-typequotgtfontitemltagtltspan-classquottsd-signature-symbolquotgtltspangt">Returns <a class="tsd-signature-type">FontItem</a><span class="tsd-signature-symbol">[]</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="setfont"></a>
+<h3 id="setltwbrgtfont">set<wbr>Font</wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">set<wbr>Font<span class="tsd-signature-symbol">(</span>font<span class="tsd-signature-symbol">: </span><a class="tsd-signature-type">FontItem</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/tools/text/text-tool.service.ts:86</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Set specified font family on active object.</p>
+</div>
+</div>
+<h4 class="tsd-parameters-title" id="parameters">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="font-lta-classquottsd-signature-typequotgtfontitemltagt">font: <a class="tsd-signature-type">FontItem</a></h5>
+</li>
+</ul><h4 class="tsd-returns-title" id="returns-ltspan-classquottsd-signature-typequotgtvoidltspangt">Returns <span class="tsd-signature-type">void</span></h4>
+</li>
+</ul></section></section>
+            </div>
+        </section>
+    </div>
+    <div class="right article-content">
+        <h4>Content</h4>
+    </div>
+</div>
+</body>
+</html>

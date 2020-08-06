@@ -1,0 +1,42 @@
+@import "../../scss/variables";
+
+$controls-height: 115 + 50;
+
+.be-dark-mode .canvas-wrapper {
+  background-image: none !important;
+  background-color: mat-color($app-background, background);
+}
+
+image-editor {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+
+  &.nav-hidden .canvas-wrapper {
+    height: calc(100% - #{$controls-height - 115}px);
+  }
+
+  .canvas-wrapper {
+    height: calc(100% - #{$controls-height}px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .canvas-mask-wrapper {
+      margin: auto;
+
+      &.not-loaded, &.empty {
+        visibility: hidden;
+      }
+    }
+
+    .canvas-container {
+      margin: auto;
+      @include mat-elevation(1);
+    }
+  }
+}

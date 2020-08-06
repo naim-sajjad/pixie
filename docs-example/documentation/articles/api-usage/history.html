@@ -1,0 +1,348 @@
+<html lang="en">
+<head>
+    <title>History</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="../../assets/styles/docs-global.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-sidenav.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-content.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-article.css">
+    <link rel="stylesheet" href="../../assets/styles/article-content.css">
+    <script src="../../assets/docs-scripts.js"></script>
+</head>
+<body>
+<nav class="hc-content-navbar">
+    <div class="nav-title">Documentation</div>
+    <a class="submit-ticket" href="https://support.vebto.com/help-center/tickets/new">Create a ticket</a>
+</nav>
+
+<div class="hc-content">
+    <div class="hc-sidenav left">
+            <h3 class="highlight-item introduction">Introduction</h3>
+        <ul>
+                            <li>
+                    <a href="../introduction/translations.html" class="highlight-item translations">Translations</a>
+                </li>
+                            <li>
+                    <a href="../introduction/interface.html" class="highlight-item interface">Interface</a>
+                </li>
+                            <li>
+                    <a href="../introduction/getting-started.html" class="highlight-item getting-started">Getting Started</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item configuration">Configuration</h3>
+        <ul>
+                            <li>
+                    <a href="../configuration/theming.html" class="highlight-item theming">Theming</a>
+                </li>
+                            <li>
+                    <a href="../configuration/filter-texture-size.html" class="highlight-item filter-texture-size">Filter Texture Size</a>
+                </li>
+                            <li>
+                    <a href="../configuration/cross-origin-images.html" class="highlight-item cross-origin-images">Cross Origin Images</a>
+                </li>
+                            <li>
+                    <a href="../configuration/specifying-base-url.html" class="highlight-item specifying-base-url">Specifying Base Url</a>
+                </li>
+                            <li>
+                    <a href="../configuration/default-settings.html" class="highlight-item default-settings">Default Settings</a>
+                </li>
+                            <li>
+                    <a href="../configuration/available-settings.html" class="highlight-item available-settings">Available Settings</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item examples">Examples</h3>
+        <ul>
+                            <li>
+                    <a href="../examples/resetting-editor.html" class="highlight-item resetting-editor">Resetting Editor</a>
+                </li>
+                            <li>
+                    <a href="../examples/watermarking-photos.html" class="highlight-item watermarking-photos">Watermarking Photos</a>
+                </li>
+                            <li>
+                    <a href="../examples/editor-as-overlay.html" class="highlight-item editor-as-overlay">Editor as Overlay</a>
+                </li>
+                            <li>
+                    <a href="../examples/opening-photos.html" class="highlight-item opening-photos">Opening Photos</a>
+                </li>
+                            <li>
+                    <a href="../examples/saving-to-server.html" class="highlight-item saving-to-server">Saving to Server</a>
+                </li>
+                            <li>
+                    <a href="../examples/loading-state.html" class="highlight-item loading-state">Loading State</a>
+                </li>
+                            <li>
+                    <a href="../examples/saving-state.html" class="highlight-item saving-state">Saving State</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item api-usage">API Usage</h3>
+        <ul>
+                            <li>
+                    <a href="../api-usage/general-api.html" class="highlight-item general-api">General API</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/import.html" class="highlight-item import">Import</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/using-tools.html" class="highlight-item using-tools">Using Tools</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/export.html" class="highlight-item export">Export</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/frame.html" class="highlight-item frame">Frame</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/stickers.html" class="highlight-item stickers">Stickers</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/shapes.html" class="highlight-item shapes">Shapes</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/text.html" class="highlight-item text">Text</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/draw.html" class="highlight-item draw">Draw</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/transform.html" class="highlight-item transform">Transform</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/crop.html" class="highlight-item crop">Crop</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/resize.html" class="highlight-item resize">Resize</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/filter.html" class="highlight-item filter">Filter</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/history.html" class="highlight-item history">History</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item objects">Objects</h3>
+        <ul>
+                            <li>
+                    <a href="../objects/events.html" class="highlight-item events">Events</a>
+                </li>
+                            <li>
+                    <a href="../objects/active-object.html" class="highlight-item active-object">Active Object</a>
+                </li>
+                            <li>
+                    <a href="../objects/object-list.html" class="highlight-item object-list">Object List</a>
+                </li>
+                    </ul>
+    </div>    <div class="center">
+        <section class="article-container">
+            <h1 class="article-title">History</h1>
+            <div class="article-body">
+                <p class="article-description">History tool can be used to undo/redo, get/load editor state, add current editor state to history and more.</p>
+<pre><code class="language-javascript">var pixie = new Pixie({
+    onLoad: function() {
+        pixie.getTool('history').add('my history item', 'some icon');
+    }
+});</code></pre>
+<h2 id="history-tool-methods"><a href="#history-tool-methods">History tool methods</a></h2>
+<section class="tsd-panel-group tsd-member-group"><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="add"></a>
+<h3 id="add">add</h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, icon<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, movePointer<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span>
+</li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/history/history-tool.service.ts:83</li>
+</ul></aside><h4 class="tsd-parameters-title" id="parameters">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5>name: <span class="tsd-signature-type">string</span>
+</h5>
+</li>
+<li>
+<h5>icon: <span class="tsd-signature-type">string</span>
+</h5>
+</li>
+<li>
+<h5>
+<span class="tsd-flag ts-flagDefault value">Default value</span> movePointer: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span>
+</h5>
+</li>
+</ul><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span>
+</h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="addfromjson"></a>
+<h3 id="addfromjson">add<wbr>From<wbr>Json</wbr></wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">add<wbr>From<wbr>Json<span class="tsd-signature-symbol">(</span>json<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></wbr></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/history/history-tool.service.ts:91</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Add new history from json and load it.</p>
+</div>
+</div>
+<h4 class="tsd-parameters-title" id="parameters">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5>json: <span class="tsd-signature-type">string</span>
+</h5>
+</li>
+</ul><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span>
+</h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="canredo"></a>
+<h3 id="canredo">can<wbr>Redo</wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">can<wbr>Redo<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/history/history-tool.service.ts:48</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Check if redo operation is possible.</p>
+</div>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span>
+</h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="canundo"></a>
+<h3 id="canundo">can<wbr>Undo</wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">can<wbr>Undo<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/history/history-tool.service.ts:41</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Check if undo operation is possible.</p>
+</div>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span>
+</h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="get"></a>
+<h3 id="get">get</h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a class="tsd-signature-type" href="../interfaces/_src_app_image_editor_history_history_item_interface_.historyitem.html">HistoryItem</a>
+</li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/history/history-tool.service.ts:108</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Get history item by name.</p>
+</div>
+</div>
+<h4 class="tsd-parameters-title" id="parameters">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5>name: <span class="tsd-signature-type">string</span>
+</h5>
+</li>
+</ul><h4 class="tsd-returns-title">Returns <a class="tsd-signature-type" href="../interfaces/_src_app_image_editor_history_history_item_interface_.historyitem.html">HistoryItem</a>
+</h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="getallitems"></a>
+<h3 id="getallitems">get<wbr>All<wbr>Items</wbr></wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Items<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a class="tsd-signature-type" href="../interfaces/_src_app_image_editor_history_history_item_interface_.historyitem.html">HistoryItem</a><span class="tsd-signature-symbol">[]</span></wbr></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/history/history-tool.service.ts:101</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Get all history items.</p>
+</div>
+</div>
+<h4 class="tsd-returns-title">Returns <a class="tsd-signature-type" href="../interfaces/_src_app_image_editor_history_history_item_interface_.historyitem.html">HistoryItem</a><span class="tsd-signature-symbol">[]</span>
+</h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="getcurrentcanvasstate"></a>
+<h3 id="getcurrentcanvasstate">get<wbr>Current<wbr>Canvas<wbr>State</wbr></wbr></wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">get<wbr>Current<wbr>Canvas<wbr>State<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a class="tsd-signature-type" href="../interfaces/_src_app_image_editor_history_serialized_canvas_.serializedcanvas.html">SerializedCanvas</a></wbr></wbr></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/history/history-tool.service.ts:122</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Get serialized canvas and editor state.</p>
+</div>
+</div>
+<h4 class="tsd-returns-title">Returns <a class="tsd-signature-type" href="../interfaces/_src_app_image_editor_history_serialized_canvas_.serializedcanvas.html">SerializedCanvas</a>
+</h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="getpointer"></a>
+<h3 id="getpointer">get<wbr>Pointer</wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">get<wbr>Pointer<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/history/history-tool.service.ts:115</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Get history stack pointer.</p>
+</div>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span>
+</h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="load"></a>
+<h3 id="load">load</h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">load<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a class="tsd-signature-type" href="../interfaces/_src_app_image_editor_history_history_item_interface_.historyitem.html">HistoryItem</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>
+</li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/history/history-tool.service.ts:131</li>
+</ul></aside><h4 class="tsd-parameters-title" id="parameters">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5>item: <a class="tsd-signature-type" href="../interfaces/_src_app_image_editor_history_history_item_interface_.historyitem.html">HistoryItem</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>
+</h5>
+</li>
+</ul><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>
+</h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="redo"></a>
+<h3 id="redo">redo</h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">redo<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span>
+</li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/history/history-tool.service.ts:63</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Redo last operation.</p>
+</div>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span>
+</h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="reload"></a>
+<h3 id="reload">reload</h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">reload<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span>
+</li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/history/history-tool.service.ts:71</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Reload current history state.</p>
+</div>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span>
+</h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="replacecurrent"></a>
+<h3 id="replacecurrent">replace<wbr>Current</wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">replace<wbr>Current<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/history/history-tool.service.ts:78</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Replace current history item with current canvas state.</p>
+</div>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span>
+</h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="undo"></a>
+<h3 id="undo">undo</h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">undo<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span>
+</li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/history/history-tool.service.ts:55</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Undo last operation.</p>
+</div>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span>
+</h4>
+</li>
+</ul></section></section>
+            </div>
+        </section>
+    </div>
+    <div class="right article-content">
+        <h4>Content</h4>
+    </div>
+</div>
+</body>
+</html>

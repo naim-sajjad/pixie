@@ -1,0 +1,417 @@
+<html lang="en">
+<head>
+    <title>Default Settings</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="../../assets/styles/docs-global.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-sidenav.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-content.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-article.css">
+    <link rel="stylesheet" href="../../assets/styles/article-content.css">
+    <script src="../../assets/docs-scripts.js"></script>
+</head>
+<body>
+<nav class="hc-content-navbar">
+    <div class="nav-title">Documentation</div>
+    <a class="submit-ticket" href="https://support.vebto.com/help-center/tickets/new">Create a ticket</a>
+</nav>
+
+<div class="hc-content">
+    <div class="hc-sidenav left">
+            <h3 class="highlight-item introduction">Introduction</h3>
+        <ul>
+                            <li>
+                    <a href="../introduction/translations.html" class="highlight-item translations">Translations</a>
+                </li>
+                            <li>
+                    <a href="../introduction/interface.html" class="highlight-item interface">Interface</a>
+                </li>
+                            <li>
+                    <a href="../introduction/getting-started.html" class="highlight-item getting-started">Getting Started</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item configuration">Configuration</h3>
+        <ul>
+                            <li>
+                    <a href="../configuration/theming.html" class="highlight-item theming">Theming</a>
+                </li>
+                            <li>
+                    <a href="../configuration/filter-texture-size.html" class="highlight-item filter-texture-size">Filter Texture Size</a>
+                </li>
+                            <li>
+                    <a href="../configuration/cross-origin-images.html" class="highlight-item cross-origin-images">Cross Origin Images</a>
+                </li>
+                            <li>
+                    <a href="../configuration/specifying-base-url.html" class="highlight-item specifying-base-url">Specifying Base Url</a>
+                </li>
+                            <li>
+                    <a href="../configuration/default-settings.html" class="highlight-item default-settings">Default Settings</a>
+                </li>
+                            <li>
+                    <a href="../configuration/available-settings.html" class="highlight-item available-settings">Available Settings</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item examples">Examples</h3>
+        <ul>
+                            <li>
+                    <a href="../examples/resetting-editor.html" class="highlight-item resetting-editor">Resetting Editor</a>
+                </li>
+                            <li>
+                    <a href="../examples/watermarking-photos.html" class="highlight-item watermarking-photos">Watermarking Photos</a>
+                </li>
+                            <li>
+                    <a href="../examples/editor-as-overlay.html" class="highlight-item editor-as-overlay">Editor as Overlay</a>
+                </li>
+                            <li>
+                    <a href="../examples/opening-photos.html" class="highlight-item opening-photos">Opening Photos</a>
+                </li>
+                            <li>
+                    <a href="../examples/saving-to-server.html" class="highlight-item saving-to-server">Saving to Server</a>
+                </li>
+                            <li>
+                    <a href="../examples/loading-state.html" class="highlight-item loading-state">Loading State</a>
+                </li>
+                            <li>
+                    <a href="../examples/saving-state.html" class="highlight-item saving-state">Saving State</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item api-usage">API Usage</h3>
+        <ul>
+                            <li>
+                    <a href="../api-usage/general-api.html" class="highlight-item general-api">General API</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/import.html" class="highlight-item import">Import</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/using-tools.html" class="highlight-item using-tools">Using Tools</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/export.html" class="highlight-item export">Export</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/frame.html" class="highlight-item frame">Frame</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/stickers.html" class="highlight-item stickers">Stickers</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/shapes.html" class="highlight-item shapes">Shapes</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/text.html" class="highlight-item text">Text</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/draw.html" class="highlight-item draw">Draw</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/transform.html" class="highlight-item transform">Transform</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/crop.html" class="highlight-item crop">Crop</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/resize.html" class="highlight-item resize">Resize</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/filter.html" class="highlight-item filter">Filter</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/history.html" class="highlight-item history">History</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item objects">Objects</h3>
+        <ul>
+                            <li>
+                    <a href="../objects/events.html" class="highlight-item events">Events</a>
+                </li>
+                            <li>
+                    <a href="../objects/active-object.html" class="highlight-item active-object">Active Object</a>
+                </li>
+                            <li>
+                    <a href="../objects/object-list.html" class="highlight-item object-list">Object List</a>
+                </li>
+                    </ul>
+    </div>    <div class="center">
+        <section class="article-container">
+            <h1 class="article-title">Default Settings</h1>
+            <div class="article-body">
+                <pre class="language-javascript"><code>var DefaultPixieConfig  = {
+    selector: 'pixie-editor',
+    textureSize: 4096,
+    ui: {
+        visible: true,
+        mode: 'inline',
+        theme: 'light',
+        allowEditorClose: true,
+        allowZoom: true,
+        toolbar: {
+            hideOpenButton: false,
+            hideCloseButton: true,
+        },
+        nav: {
+            position: 'top',
+            replaceDefault: false,
+            items: [
+                {name: 'filter', icon: 'filter-custom', action: 'filter'},
+                {type: 'separator'},
+                {name: 'resize', icon: 'resize-custom', action: 'resize'},
+                {name: 'crop', icon: 'crop-custom', action: 'crop'},
+                {name: 'transform', icon: 'transform-custom', action: 'transform'},
+                {type: 'separator'},
+                {name: 'draw', icon: 'pencil-custom', action: 'draw'},
+                {name: 'text', icon: 'text-box-custom', action: 'text'},
+                {name: 'shapes', icon: 'polygon-custom', action: 'shapes'},
+                {name: 'stickers', icon: 'sticker-custom', action: 'stickers'},
+                {name: 'frame', icon: 'frame-custom', action: 'frame'},
+                {type: 'separator'},
+                {name: 'corners', icon: 'rounded-corner-custom', action: 'corners'},
+                {name: 'background', icon: 'background-custom', action: 'background'},
+                {name: 'merge', icon: 'merge-custom', action: 'merge'},
+            ]
+        },
+        openImageDialog: {
+            show: true,
+            replaceDefaultSampleImages: false,
+            sampleImages: [
+                {
+                    url: 'images/samples/sample1.jpg',
+                    thumbnail: 'images/samples/sample1_thumbnail.jpg',
+                },
+                {
+                    url: 'images/samples/sample2.jpg',
+                    thumbnail: 'images/samples/sample2_thumbnail.jpg',
+                },
+                {
+                    url: 'images/samples/sample3.jpg',
+                    thumbnail: 'images/samples/sample3_thumbnail.jpg',
+                },
+            ]
+        },
+        colorPresets: {
+            replaceDefault: false,
+            items: [
+                'rgb(0,0,0)',
+                'rgb(255, 255, 255)',
+                'rgb(242, 38, 19)',
+                'rgb(249, 105, 14)',
+                'rgb(253, 227, 167)',
+                'rgb(4, 147, 114)',
+                'rgb(30, 139, 195)',
+                'rgb(142, 68, 173)',
+            ],
+        }
+    },
+    languages: {
+        active: 'default',
+    },
+    googleFontsApiKey: 'AIzaSyDOrI6VJiMbR6XLvlp3CdCPZj1T2PzVkKs',
+    objectDefaults: {
+        global: {
+            transparentCorners: false,
+            borderOpacityWhenMoving: 1,
+            cornerStyle: 'circle',
+            cornerColor: '#ccc',
+            cornerStrokeColor: '#fff',
+            cornerSize: 16,
+            lockUniScaling: true,
+            fill: 'rgb(30, 139, 195)',
+            opacity: 1,
+            backgroundColor: null,
+            strokeWidth: 0.05,
+            stroke: '#000',
+            shadow: {
+               color: '#000',
+               blur: 3,
+               offsetX: -1,
+               offsetY: 0,
+            },
+            textAlign: 'initial',
+            underline: false,
+            linethrough: false,
+            fontStyle: 'normal',
+            fontFamily: 'Times New Roman',
+            fontWeight: 400,
+        }
+    },
+    tools: {
+        filter: {
+            replaceDefault: false,
+            items: [
+                'grayscale',
+                'blackWhite',
+                'sharpen',
+                'invert',
+                'vintage',
+                'polaroid',
+                'kodachrome',
+                'technicolor',
+                'brownie',
+                'sepia',
+                'removeColor',
+                'brightness',
+                'gamma',
+                'noise',
+                'pixelate',
+                'blur',
+                'emboss',
+                'blendColor',
+            ]
+        },
+        crop: {
+            replaceDefaultPresets: false,
+            hideCustomControls: false,
+            defaultRatio: '16:9',
+            presets: [
+                {ratio: '3:2', name: '3:2'},
+                {ratio: '5:3', name: '5:3'},
+                {ratio: '4:3', name: '4:3'},
+                {ratio: '5:4', name: '5:4'},
+                {ratio: '6:4', name: '6:4'},
+                {ratio: '7:5', name: '7:5'},
+                {ratio: '10:8', name: '10:8'},
+                {ratio: '16:9', name: '16:9'},
+            ]
+        },
+        text: {
+            defaultCategory: 'handwriting',
+            defaultText: 'Double click to edit',
+        },
+        draw: {
+            replaceDefaultBrushSizes: false,
+            replaceDefaultBrushTypes: false,
+            brushSizes: [1, 8, 15, 20, 25],
+            brushTypes: [
+                'PencilBrush',
+                'VLineBrush',
+                'HLineBrush',
+                'CircleBrush',
+                'SquareBrush',
+                'SprayBrush',
+            ],
+        },
+        shapes: {
+            replaceDefault: false,
+            items: defaultShapes.slice(),
+        },
+        stickers: {
+            replaceDefault: false,
+            items: [
+                {name: 'emoticons', list: emoticonsList, type: 'svg', thumbnailUrl: 'images/ui/emoticon.svg'},
+                {name: 'doodles', items: 100, type: 'svg', thumbnailUrl: 'images/ui/doodles.svg'},
+                {name: 'landmarks', items: 100, type: 'svg', thumbnailUrl: 'images/ui/landmark.svg'},
+                {name: 'stars', items: 6, type: 'png', darkBg: true, thumbnailUrl: 'images/ui/star.svg'},
+                {name: 'clouds', items: 15, type: 'png', darkBg: true, thumbnailUrl: 'images/ui/clouds.svg'},
+                {name: 'bubbles', items: 104, type: 'png', thumbnailUrl: 'images/ui/speech-bubble.svg'},
+                {name: 'transportation', items: 22, type: 'svg', thumbnailUrl: 'images/ui/transportation.svg'},
+                {name: 'beach', items: 22, type: 'svg', thumbnailUrl: 'images/ui/beach.svg'},
+            ],
+        },
+        import: {
+            validExtensions: ['png', 'jpg', 'jpeg', 'svg', 'json', 'gif'],
+        },
+        export: {
+            defaultFormat: 'png',
+            defaultQuality: 0.8,
+            defaultName: 'image',
+        },
+        frame: {
+            replaceDefault: false,
+            items: [
+                {
+                    name: 'basic',
+                    mode: 'basic',
+                    size: {
+                        min: 1,
+                        max: 35,
+                        default: 10,
+                    }
+                },
+                {
+                    name: 'pine',
+                    mode: 'stretch',
+                    size: {
+                        min: 1,
+                        max: 35,
+                        default: 15,
+                    }
+                },
+                {
+                    name: 'oak',
+                    mode: 'stretch',
+                    size: {
+                        min: 1,
+                        max: 35,
+                        default: 15,
+                    }
+                },
+                {
+                    name: 'rainbow',
+                    mode: 'stretch',
+                    size: {
+                        min: 1,
+                        max: 35,
+                        default: 15,
+                    }
+                },
+                {
+                    name: 'grunge1',
+                    display_name: 'grunge #1',
+                    mode: 'stretch',
+                    size: {
+                        min: 1,
+                        max: 35,
+                        default: 15,
+                    }
+                },
+                {
+                    name: 'grunge2',
+                    display_name: 'grunge #2',
+                    mode: 'stretch',
+                    size: {
+                        min: 1,
+                        max: 35,
+                        default: 20,
+                    }
+                },
+                {
+                    name: 'ebony',
+                    mode: 'stretch',
+                    size: {
+                        min: 1,
+                        max: 35,
+                        default: 15,
+                    }
+                },
+                {
+                    name: 'art1',
+                    display_name: 'Art #1',
+                    mode: 'repeat',
+                    size: {
+                        min: 10,
+                        max: 70,
+                        default: 55,
+                    },
+                },
+                {
+                    name: 'art2',
+                    display_name: 'Art #2',
+                    mode: 'repeat',
+                    size: {
+                        min: 10,
+                        max: 70,
+                        default: 55,
+                    },
+                }
+            ]
+        }
+    }
+};</code></pre>
+            </div>
+        </section>
+    </div>
+    <div class="right article-content">
+        <h4>Content</h4>
+    </div>
+</div>
+</body>
+</html>

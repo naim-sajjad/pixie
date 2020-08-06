@@ -1,0 +1,7 @@
+@import "../../../../../scss/_variables";
+
+gradient-controls-drawer {
+  @media only screen and (max-width: $mobile-mode-breakpoint) {
+    justify-content: flex-start;
+  }
+}

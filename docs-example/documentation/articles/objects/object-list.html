@@ -1,0 +1,247 @@
+<html lang="en">
+<head>
+    <title>Object List</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="../../assets/styles/docs-global.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-sidenav.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-content.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-article.css">
+    <link rel="stylesheet" href="../../assets/styles/article-content.css">
+    <script src="../../assets/docs-scripts.js"></script>
+</head>
+<body>
+<nav class="hc-content-navbar">
+    <div class="nav-title">Documentation</div>
+    <a class="submit-ticket" href="https://support.vebto.com/help-center/tickets/new">Create a ticket</a>
+</nav>
+
+<div class="hc-content">
+    <div class="hc-sidenav left">
+            <h3 class="highlight-item introduction">Introduction</h3>
+        <ul>
+                            <li>
+                    <a href="../introduction/translations.html" class="highlight-item translations">Translations</a>
+                </li>
+                            <li>
+                    <a href="../introduction/interface.html" class="highlight-item interface">Interface</a>
+                </li>
+                            <li>
+                    <a href="../introduction/getting-started.html" class="highlight-item getting-started">Getting Started</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item configuration">Configuration</h3>
+        <ul>
+                            <li>
+                    <a href="../configuration/theming.html" class="highlight-item theming">Theming</a>
+                </li>
+                            <li>
+                    <a href="../configuration/filter-texture-size.html" class="highlight-item filter-texture-size">Filter Texture Size</a>
+                </li>
+                            <li>
+                    <a href="../configuration/cross-origin-images.html" class="highlight-item cross-origin-images">Cross Origin Images</a>
+                </li>
+                            <li>
+                    <a href="../configuration/specifying-base-url.html" class="highlight-item specifying-base-url">Specifying Base Url</a>
+                </li>
+                            <li>
+                    <a href="../configuration/default-settings.html" class="highlight-item default-settings">Default Settings</a>
+                </li>
+                            <li>
+                    <a href="../configuration/available-settings.html" class="highlight-item available-settings">Available Settings</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item examples">Examples</h3>
+        <ul>
+                            <li>
+                    <a href="../examples/resetting-editor.html" class="highlight-item resetting-editor">Resetting Editor</a>
+                </li>
+                            <li>
+                    <a href="../examples/watermarking-photos.html" class="highlight-item watermarking-photos">Watermarking Photos</a>
+                </li>
+                            <li>
+                    <a href="../examples/editor-as-overlay.html" class="highlight-item editor-as-overlay">Editor as Overlay</a>
+                </li>
+                            <li>
+                    <a href="../examples/opening-photos.html" class="highlight-item opening-photos">Opening Photos</a>
+                </li>
+                            <li>
+                    <a href="../examples/saving-to-server.html" class="highlight-item saving-to-server">Saving to Server</a>
+                </li>
+                            <li>
+                    <a href="../examples/loading-state.html" class="highlight-item loading-state">Loading State</a>
+                </li>
+                            <li>
+                    <a href="../examples/saving-state.html" class="highlight-item saving-state">Saving State</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item api-usage">API Usage</h3>
+        <ul>
+                            <li>
+                    <a href="../api-usage/general-api.html" class="highlight-item general-api">General API</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/import.html" class="highlight-item import">Import</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/using-tools.html" class="highlight-item using-tools">Using Tools</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/export.html" class="highlight-item export">Export</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/frame.html" class="highlight-item frame">Frame</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/stickers.html" class="highlight-item stickers">Stickers</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/shapes.html" class="highlight-item shapes">Shapes</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/text.html" class="highlight-item text">Text</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/draw.html" class="highlight-item draw">Draw</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/transform.html" class="highlight-item transform">Transform</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/crop.html" class="highlight-item crop">Crop</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/resize.html" class="highlight-item resize">Resize</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/filter.html" class="highlight-item filter">Filter</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/history.html" class="highlight-item history">History</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item objects">Objects</h3>
+        <ul>
+                            <li>
+                    <a href="../objects/events.html" class="highlight-item events">Events</a>
+                </li>
+                            <li>
+                    <a href="../objects/active-object.html" class="highlight-item active-object">Active Object</a>
+                </li>
+                            <li>
+                    <a href="../objects/object-list.html" class="highlight-item object-list">Object List</a>
+                </li>
+                    </ul>
+    </div>    <div class="center">
+        <section class="article-container">
+            <h1 class="article-title">Object List</h1>
+            <div class="article-body">
+                <p class="article-description">Object list service contains a number of useful methods for programmatically listing all objects (stickers, text, shapes etc.) that are currently on the canvas.</p>
+<pre><code class="language-javascript">var pixie = new Pixie({
+    onLoad: function() {
+        var objectList = pixie.get('objectList');
+        console.log(objectList.getAll()); // prints all objects that are currently on canvas
+    }
+});</code></pre>
+<h2 id="methods">Methods</h2>
+<section class="tsd-panel-group tsd-member-group "><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="get"></a>
+<h3 id="get">get</h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in app/image-editor/objects/objects.service.ts:31</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Get object with specified name from canvas.</p>
+</div>
+</div>
+<h4 id="parameters" class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="name-ltspan-classquottsd-signature-typequotgtstringltspangt">name: <span class="tsd-signature-type">string</span></h5>
+</li>
+</ul><h4 id="returns-ltspan-classquottsd-signature-typequotgtobjectltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">Object</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="getall"></a>
+<h3 id="getltwbrgtall">get<wbr>All</wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">get<wbr>All<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol">[]</span></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in app/image-editor/objects/objects.service.ts:24</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Get all objects that are currently on canvas.</p>
+</div>
+</div>
+<h4 id="returns-ltspan-classquottsd-signature-typequotgtobjectltspangtltspan-classquottsd-signature-symbolquotgtltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol">[]</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="getbyid"></a>
+<h3 id="getltwbrgtbyid">get<wbr>ById</wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">get<wbr>ById<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in app/image-editor/objects/objects.service.ts:38</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Get object with specified id from canvas.</p>
+</div>
+</div>
+<h4 id="parameters" class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="id-ltspan-classquottsd-signature-typequotgtstringltspangt">id: <span class="tsd-signature-type">string</span></h5>
+</li>
+</ul><h4 id="returns-ltspan-classquottsd-signature-typequotgtobjectltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">Object</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="has"></a>
+<h3 id="has">has</h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">has<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in app/image-editor/objects/objects.service.ts:53</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Check if object with specified name exists on canvas.</p>
+</div>
+</div>
+<h4 id="parameters" class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="name-ltspan-classquottsd-signature-typequotgtstringltspangt">name: <span class="tsd-signature-type">string</span></h5>
+</li>
+</ul><h4 id="returns-ltspan-classquottsd-signature-typequotgtbooleanltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="isactive"></a>
+<h3 id="isltwbrgtactive">is<wbr>Active</wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">is<wbr>Active<span class="tsd-signature-symbol">(</span>objectOrId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in app/image-editor/objects/objects.service.ts:45</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Check whether specified object is currently selected.</p>
+</div>
+</div>
+<h4 id="parameters" class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="objectorid-ltspan-classquottsd-signature-typequotgtobjectltspangtltspan-classquottsd-signature-symbolquotgt-ltspangtltspan-classquottsd-signature-typequotgtstringltspangt">objectOrId: <span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+</li>
+</ul><h4 id="returns-ltspan-classquottsd-signature-typequotgtbooleanltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="select"></a>
+<h3 id="select">select</h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">select<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in app/image-editor/objects/objects.service.ts:60</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Select specified object.</p>
+</div>
+</div>
+<h4 id="parameters" class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="object-ltspan-classquottsd-signature-typequotgtobjectltspangt">object: <span class="tsd-signature-type">Object</span></h5>
+</li>
+</ul><h4 id="returns-ltspan-classquottsd-signature-typequotgtvoidltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+</li>
+</ul></section></section>
+            </div>
+        </section>
+    </div>
+    <div class="right article-content">
+        <h4>Content</h4>
+    </div>
+</div>
+</body>
+</html>

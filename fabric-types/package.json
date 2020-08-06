@@ -1,0 +1,93 @@
+{
+  "_from": "@types/fabric@^3.6.2",
+  "_id": "@types/fabric@3.6.2",
+  "_inBundle": false,
+  "_integrity": "sha512-DaruEJn97dSungejaT1XUyZQ4FSY9dim0gmY2y+S6781vKkw3VkSpndcklpCmCFSgpcz/8A1RB7wk0lrNk2pbQ==",
+  "_location": "/@types/fabric",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@types/fabric@^3.6.2",
+    "name": "@types/fabric",
+    "escapedName": "@types%2ffabric",
+    "scope": "@types",
+    "rawSpec": "^3.6.2",
+    "saveSpec": null,
+    "fetchSpec": "^3.6.2"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@types/fabric/-/fabric-3.6.2.tgz",
+  "_shasum": "adffa9a0bccd9ac0edab3952d4a26d67a735597a",
+  "_spec": "@types/fabric@^3.6.2",
+  "_where": "/mnt/e/apps/pixie2",
+  "bugs": {
+    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Oliver Klemencic",
+      "url": "https://github.com/oklemencic"
+    },
+    {
+      "name": "Joseph Livecchi",
+      "url": "https://github.com/joewashear007"
+    },
+    {
+      "name": "Michael Randolph",
+      "url": "https://github.com/mrand01"
+    },
+    {
+      "name": "Tiger Oakes",
+      "url": "https://github.com/NotWoods"
+    },
+    {
+      "name": "Brian Martinson",
+      "url": "https://github.com/bmartinson"
+    },
+    {
+      "name": "Rogerio Teixeira",
+      "url": "https://github.com/RogerioTeixeira"
+    },
+    {
+      "name": "Bradley Hill",
+      "url": "https://github.com/BradleyHill"
+    },
+    {
+      "name": "Bryan Krol",
+      "url": "https://github.com/bmkrol823"
+    },
+    {
+      "name": "Glenn Gartner",
+      "url": "https://github.com/glenngartner"
+    },
+    {
+      "name": "Codertx",
+      "url": "https://github.com/codertx"
+    },
+    {
+      "name": "Mike Moore",
+      "url": "https://github.com/mike667"
+    }
+  ],
+  "dependencies": {},
+  "deprecated": false,
+  "description": "TypeScript definitions for FabricJS",
+  "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped#readme",
+  "license": "MIT",
+  "main": "",
+  "name": "@types/fabric",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+    "directory": "types/fabric"
+  },
+  "scripts": {},
+  "typeScriptVersion": "2.8",
+  "types": "index.d.ts",
+  "typesPublisherContentHash": "5ea947f8ab91feb86224db09b9c224cc61a0e1e78ba4724b4b62929df3c41f1d",
+  "version": "3.6.2"
+}

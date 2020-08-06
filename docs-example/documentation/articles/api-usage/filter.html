@@ -1,0 +1,287 @@
+<html lang="en">
+<head>
+    <title>Filter</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="../../assets/styles/docs-global.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-sidenav.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-content.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-article.css">
+    <link rel="stylesheet" href="../../assets/styles/article-content.css">
+    <script src="../../assets/docs-scripts.js"></script>
+</head>
+<body>
+<nav class="hc-content-navbar">
+    <div class="nav-title">Documentation</div>
+    <a class="submit-ticket" href="https://support.vebto.com/help-center/tickets/new">Create a ticket</a>
+</nav>
+
+<div class="hc-content">
+    <div class="hc-sidenav left">
+            <h3 class="highlight-item introduction">Introduction</h3>
+        <ul>
+                            <li>
+                    <a href="../introduction/translations.html" class="highlight-item translations">Translations</a>
+                </li>
+                            <li>
+                    <a href="../introduction/interface.html" class="highlight-item interface">Interface</a>
+                </li>
+                            <li>
+                    <a href="../introduction/getting-started.html" class="highlight-item getting-started">Getting Started</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item configuration">Configuration</h3>
+        <ul>
+                            <li>
+                    <a href="../configuration/theming.html" class="highlight-item theming">Theming</a>
+                </li>
+                            <li>
+                    <a href="../configuration/filter-texture-size.html" class="highlight-item filter-texture-size">Filter Texture Size</a>
+                </li>
+                            <li>
+                    <a href="../configuration/cross-origin-images.html" class="highlight-item cross-origin-images">Cross Origin Images</a>
+                </li>
+                            <li>
+                    <a href="../configuration/specifying-base-url.html" class="highlight-item specifying-base-url">Specifying Base Url</a>
+                </li>
+                            <li>
+                    <a href="../configuration/default-settings.html" class="highlight-item default-settings">Default Settings</a>
+                </li>
+                            <li>
+                    <a href="../configuration/available-settings.html" class="highlight-item available-settings">Available Settings</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item examples">Examples</h3>
+        <ul>
+                            <li>
+                    <a href="../examples/resetting-editor.html" class="highlight-item resetting-editor">Resetting Editor</a>
+                </li>
+                            <li>
+                    <a href="../examples/watermarking-photos.html" class="highlight-item watermarking-photos">Watermarking Photos</a>
+                </li>
+                            <li>
+                    <a href="../examples/editor-as-overlay.html" class="highlight-item editor-as-overlay">Editor as Overlay</a>
+                </li>
+                            <li>
+                    <a href="../examples/opening-photos.html" class="highlight-item opening-photos">Opening Photos</a>
+                </li>
+                            <li>
+                    <a href="../examples/saving-to-server.html" class="highlight-item saving-to-server">Saving to Server</a>
+                </li>
+                            <li>
+                    <a href="../examples/loading-state.html" class="highlight-item loading-state">Loading State</a>
+                </li>
+                            <li>
+                    <a href="../examples/saving-state.html" class="highlight-item saving-state">Saving State</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item api-usage">API Usage</h3>
+        <ul>
+                            <li>
+                    <a href="../api-usage/general-api.html" class="highlight-item general-api">General API</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/import.html" class="highlight-item import">Import</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/using-tools.html" class="highlight-item using-tools">Using Tools</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/export.html" class="highlight-item export">Export</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/frame.html" class="highlight-item frame">Frame</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/stickers.html" class="highlight-item stickers">Stickers</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/shapes.html" class="highlight-item shapes">Shapes</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/text.html" class="highlight-item text">Text</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/draw.html" class="highlight-item draw">Draw</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/transform.html" class="highlight-item transform">Transform</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/crop.html" class="highlight-item crop">Crop</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/resize.html" class="highlight-item resize">Resize</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/filter.html" class="highlight-item filter">Filter</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/history.html" class="highlight-item history">History</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item objects">Objects</h3>
+        <ul>
+                            <li>
+                    <a href="../objects/events.html" class="highlight-item events">Events</a>
+                </li>
+                            <li>
+                    <a href="../objects/active-object.html" class="highlight-item active-object">Active Object</a>
+                </li>
+                            <li>
+                    <a href="../objects/object-list.html" class="highlight-item object-list">Object List</a>
+                </li>
+                    </ul>
+    </div>    <div class="center">
+        <section class="article-container">
+            <h1 class="article-title">Filter</h1>
+            <div class="article-body">
+                <p class="article-description">Pixie currently ships with 18 lightning fast filters that use WebGL, if available, or canvas fallback otherwise and allows you to create custom filters.</p>
+<pre><code class="language-javascript">var pixie = new Pixie({
+    onLoad: function() {
+        var filterTool = pixie.getTool('filter');
+        filterTool.apply(filterTool.getByName('grayscale'));
+    }
+});</code></pre>
+<div class="img-container"><img src="../../assets/images/article-images/5XwDKdFoibsQCmTkSvKaeu4B4X4YvlazWf9WHxCt.png"></div>
+<h2 id="showing-specific-filters"><a href="#showing-specific-filters">Showing only specific filters</a></h2>
+<p>To show only specific filters, specify names of the filters that should be shown using  <code>items</code> option and set <code>replaceDefault</code> to <code>true</code>.</p>
+<pre><code class="language-javascript">var pixie = new Pixie({
+    tools: {
+        filter: {
+            replaceDefault: true,
+            items: ['brightness', 'noise', 'pixelate'],
+        }
+    }
+})</code></pre>
+<h2 id="filter-tool-methods"><a href="#filter-tool-methods">Filter tool methods</a></h2>
+<section class="tsd-panel-group tsd-member-group "><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="addcustom"></a>
+<h3 id="addltwbrgtcustom">add<wbr>Custom</wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">add<wbr>Custom<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, filter<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span>, editableOptions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span>, initialConfig<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/tools/filter/filter-tool.service.ts:145</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Add a custom filter to fabric.</p>
+</div>
+</div>
+<h4 id="parameters" class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="name-ltspan-classquottsd-signature-typequotgtstringltspangt">name: <span class="tsd-signature-type">string</span></h5>
+</li>
+<li>
+<h5 id="filter-ltspan-classquottsd-signature-typequotgtobjectltspangt">filter: <span class="tsd-signature-type">object</span></h5>
+</li>
+<li>
+<h5 id="ltspan-classquottsd-flag-ts-flagoptionalquotgtoptionalltspangt-options-ltspan-classquottsd-signature-typequotgtobjectltspangt"><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">object</span></h5>
+</li>
+</ul><h4 id="returns-ltspan-classquottsd-signature-typequotgtvoidltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="applied"></a>
+<h3 id="applied">applied</h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">applied<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/tools/filter/filter-tool.service.ts:64</li>
+</ul></aside><h4 id="parameters" class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="name-ltspan-classquottsd-signature-typequotgtstringltspangt">name: <span class="tsd-signature-type">string</span></h5>
+</li>
+</ul><h4 id="returns-ltspan-classquottsd-signature-typequotgtbooleanltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="apply"></a>
+<h3 id="apply">apply</h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">apply<span class="tsd-signature-symbol">(</span>filter<span class="tsd-signature-symbol">: </span><a class="tsd-signature-type">Filter</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/tools/filter/filter-tool.service.ts:24</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Apply specified filter to canvas.</p>
+</div>
+</div>
+<h4 id="parameters" class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="filter-lta-classquottsd-signature-typequotgtfilterltagt">filter: <a class="tsd-signature-type">Filter</a></h5>
+</li>
+</ul><h4 id="returns-ltspan-classquottsd-signature-typequotgtvoidltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="applyvalue"></a>
+<h3 id="applyltwbrgtvalue">apply<wbr>Value</wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">apply<wbr>Value<span class="tsd-signature-symbol">(</span>filter<span class="tsd-signature-symbol">: </span><a class="tsd-signature-type">Filter</a>, optionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, optionValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/tools/filter/filter-tool.service.ts:105</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Apply specified value to currently active filter.</p>
+</div>
+</div>
+<h4 id="parameters" class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="filter-lta-classquottsd-signature-typequotgtfilterltagt">filter: <a class="tsd-signature-type">Filter</a></h5>
+</li>
+<li>
+<h5 id="optionname-ltspan-classquottsd-signature-typequotgtstringltspangt">optionName: <span class="tsd-signature-type">string</span></h5>
+</li>
+<li>
+<h5 id="optionvalue-ltspan-classquottsd-signature-typequotgtnumberltspangtltspan-classquottsd-signature-symbolquotgt-ltspangtltspan-classquottsd-signature-typequotgtstringltspangt">optionValue: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+</li>
+</ul><h4 id="returns-ltspan-classquottsd-signature-typequotgtvoidltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="create"></a>
+<h3 id="create">create</h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>filter<span class="tsd-signature-symbol">: </span><a class="tsd-signature-type">Filter</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IBaseFilter</span></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/tools/filter/filter-tool.service.ts:124</li>
+</ul></aside><h4 id="parameters" class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="filter-lta-classquottsd-signature-typequotgtfilterltagt">filter: <a class="tsd-signature-type">Filter</a></h5>
+</li>
+</ul><h4 id="returns-ltspan-classquottsd-signature-typequotgtibasefilterltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">IBaseFilter</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="getall"></a>
+<h3 id="getltwbrgtall">get<wbr>All</wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">get<wbr>All<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a class="tsd-signature-type">Filter</a><span class="tsd-signature-symbol">[]</span></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/tools/filter/filter-tool.service.ts:53</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Get all available filters.</p>
+</div>
+</div>
+<h4 id="returns-lta-classquottsd-signature-typequotgtfilterltagtltspan-classquottsd-signature-symbolquotgtltspangt" class="tsd-returns-title">Returns <a class="tsd-signature-type">Filter</a><span class="tsd-signature-symbol">[]</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="getbyname"></a>
+<h3 id="getltwbrgtbyname">get<wbr>ByName</wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">get<wbr>ByName<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a class="tsd-signature-type">Filter</a></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/tools/filter/filter-tool.service.ts:60</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Get filter by specified name.</p>
+</div>
+</div>
+<h4 id="parameters" class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="name-ltspan-classquottsd-signature-typequotgtstringltspangt">name: <span class="tsd-signature-type">string</span></h5>
+</li>
+</ul><h4 id="returns-lta-classquottsd-signature-typequotgtfilterltagt" class="tsd-returns-title">Returns <a class="tsd-signature-type">Filter</a></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="remove"></a>
+<h3 id="remove">remove</h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>filter<span class="tsd-signature-symbol">: </span><a class="tsd-signature-type">Filter</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in src/app/image-editor/tools/filter/filter-tool.service.ts:37</li>
+</ul></aside><h4 id="parameters" class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="filter-lta-classquottsd-signature-typequotgtfilterltagt">filter: <a class="tsd-signature-type">Filter</a></h5>
+</li>
+</ul><h4 id="returns-ltspan-classquottsd-signature-typequotgtvoidltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+</li>
+</ul></section></section>
+            </div>
+        </section>
+    </div>
+    <div class="right article-content">
+        <h4>Content</h4>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<html lang="en">
+<head>
+    <title>Theming</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="../../assets/styles/docs-global.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-sidenav.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-content.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-article.css">
+    <link rel="stylesheet" href="../../assets/styles/article-content.css">
+    <script src="../../assets/docs-scripts.js"></script>
+</head>
+<body>
+<nav class="hc-content-navbar">
+    <div class="nav-title">Documentation</div>
+    <a class="submit-ticket" href="https://support.vebto.com/help-center/tickets/new">Create a ticket</a>
+</nav>
+
+<div class="hc-content">
+    <div class="hc-sidenav left">
+            <h3 class="highlight-item introduction">Introduction</h3>
+        <ul>
+                            <li>
+                    <a href="../introduction/translations.html" class="highlight-item translations">Translations</a>
+                </li>
+                            <li>
+                    <a href="../introduction/interface.html" class="highlight-item interface">Interface</a>
+                </li>
+                            <li>
+                    <a href="../introduction/getting-started.html" class="highlight-item getting-started">Getting Started</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item configuration">Configuration</h3>
+        <ul>
+                            <li>
+                    <a href="../configuration/theming.html" class="highlight-item theming">Theming</a>
+                </li>
+                            <li>
+                    <a href="../configuration/filter-texture-size.html" class="highlight-item filter-texture-size">Filter Texture Size</a>
+                </li>
+                            <li>
+                    <a href="../configuration/cross-origin-images.html" class="highlight-item cross-origin-images">Cross Origin Images</a>
+                </li>
+                            <li>
+                    <a href="../configuration/specifying-base-url.html" class="highlight-item specifying-base-url">Specifying Base Url</a>
+                </li>
+                            <li>
+                    <a href="../configuration/default-settings.html" class="highlight-item default-settings">Default Settings</a>
+                </li>
+                            <li>
+                    <a href="../configuration/available-settings.html" class="highlight-item available-settings">Available Settings</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item examples">Examples</h3>
+        <ul>
+                            <li>
+                    <a href="../examples/resetting-editor.html" class="highlight-item resetting-editor">Resetting Editor</a>
+                </li>
+                            <li>
+                    <a href="../examples/watermarking-photos.html" class="highlight-item watermarking-photos">Watermarking Photos</a>
+                </li>
+                            <li>
+                    <a href="../examples/editor-as-overlay.html" class="highlight-item editor-as-overlay">Editor as Overlay</a>
+                </li>
+                            <li>
+                    <a href="../examples/opening-photos.html" class="highlight-item opening-photos">Opening Photos</a>
+                </li>
+                            <li>
+                    <a href="../examples/saving-to-server.html" class="highlight-item saving-to-server">Saving to Server</a>
+                </li>
+                            <li>
+                    <a href="../examples/loading-state.html" class="highlight-item loading-state">Loading State</a>
+                </li>
+                            <li>
+                    <a href="../examples/saving-state.html" class="highlight-item saving-state">Saving State</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item api-usage">API Usage</h3>
+        <ul>
+                            <li>
+                    <a href="../api-usage/general-api.html" class="highlight-item general-api">General API</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/import.html" class="highlight-item import">Import</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/using-tools.html" class="highlight-item using-tools">Using Tools</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/export.html" class="highlight-item export">Export</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/frame.html" class="highlight-item frame">Frame</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/stickers.html" class="highlight-item stickers">Stickers</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/shapes.html" class="highlight-item shapes">Shapes</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/text.html" class="highlight-item text">Text</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/draw.html" class="highlight-item draw">Draw</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/transform.html" class="highlight-item transform">Transform</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/crop.html" class="highlight-item crop">Crop</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/resize.html" class="highlight-item resize">Resize</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/filter.html" class="highlight-item filter">Filter</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/history.html" class="highlight-item history">History</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item objects">Objects</h3>
+        <ul>
+                            <li>
+                    <a href="../objects/events.html" class="highlight-item events">Events</a>
+                </li>
+                            <li>
+                    <a href="../objects/active-object.html" class="highlight-item active-object">Active Object</a>
+                </li>
+                            <li>
+                    <a href="../objects/object-list.html" class="highlight-item object-list">Object List</a>
+                </li>
+                    </ul>
+    </div>    <div class="center">
+        <section class="article-container">
+            <h1 class="article-title">Theming</h1>
+            <div class="article-body">
+                <p>All colors used in pixie interface can be overwritten either fully or partially via configuration.</p>
+<div class="widget widget-note">
+<div class="title">Note:</div>
+Use <strong>is_dark</strong> option to specify whether your theme is dark or light.</div>
+<h2 id="partial-override">Partial Override</h2>
+<p>To override only main colors simply specify the colors you want to override:</p>
+<pre class="language-javascript"><code>var pixie = new Pixie({
+    ui: {
+     themes: [
+         {
+             name: 'My Custom Theme',
+             colors: {
+                 '--be-primary-default': '#3F51B5',
+                 '--be-accent-default': '#8BC34A',
+                 '--be-accent-lighter': '#AED581',
+             }
+          }
+     ],
+    }
+});</code></pre>
+<h2 id="full-override">Full override</h2>
+<p>This is a list of all available colors for full customization:</p>
+<pre class="language-javascript"><code>var pixie = new Pixie({
+    ui: {
+     themes: [
+         {
+             name: 'My Custom Theme',
+             is_dark: true,
+             colors: {
+                 '--be-primary-lighter': '#2a2a2a',
+                 '--be-primary-default': '#262626',
+                 '--be-primary-darker': '#181c26',
+                 '--be-accent-default': '#8AB2E0',
+                 '--be-accent-lighter': '#B9D1EC',
+                 '--be-accent-contrast': 'rgba(255, 255, 255, 1)',
+                 '--be-accent-emphasis': 'rgba(185, 209, 236, 0.1)',
+                 '--be-foreground-base': '#fff',
+                 '--be-text': '#fff',
+                 '--be-hint-text': 'rgba(255, 255, 255, 0.5)',
+                 '--be-secondary-text': 'rgba(255, 255, 255, 0.7)',
+                 '--be-label': 'rgba(255, 255, 255, 0.7)',
+                 '--be-background': '#1D1D1D',
+                 '--be-background-alternative': '#121212',
+                 '--be-divider-lighter': 'rgba(255, 255, 255, 0.07)',
+                 '--be-divider-default': 'rgba(255, 255, 255, 0.12)',
+                 '--be-disabled-button-text': 'rgba(255, 255, 255, 0.3)',
+                 '--be-disabled-toggle': '#000',
+                 '--be-chip': '#616161',
+                 '--be-hover': 'rgba(255, 255, 255, 0.04)',
+                 '--be-selected-button': '#212121',
+                 '--be-disabled-button': 'rgba(255, 255, 255, 0.12)',
+                 '--be-raised-button': '#424242',
+                 '--be-backdrop': '#BDBDBD',
+                 '--be-link': '#c5cae9',
+             }
+          }
+     ],
+    }
+});</code></pre>
+<h2 id="multiple-themes">Multiple Themes</h2>
+<p>You can register multiple themes and select active one using: <code>pixie.getTool('themes').select('dark');</code></p>
+<pre class="language-javascript"><code>var pixie = new Pixie({
+    ui: {
+     themes: [
+         {
+             name: 'My Custom Theme #1',
+             colors: {
+                 '--be-primary-default': '#3F51B5',
+             }
+          },
+          {
+             name: 'My Custom Theme #2',
+             is_dark: true,
+             colors: {
+                 '--be-primary-default': '#262626',
+             }
+          }
+     ],
+    }
+});</code></pre>
+            </div>
+        </section>
+    </div>
+    <div class="right article-content">
+        <h4>Content</h4>
+    </div>
+</div>
+</body>
+</html>

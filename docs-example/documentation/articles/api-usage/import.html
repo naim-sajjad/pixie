@@ -1,0 +1,254 @@
+<html lang="en">
+<head>
+    <title>Import</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="../../assets/styles/docs-global.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-sidenav.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-content.css">
+    <link rel="stylesheet" href="../../assets/styles/docs-article.css">
+    <link rel="stylesheet" href="../../assets/styles/article-content.css">
+    <script src="../../assets/docs-scripts.js"></script>
+</head>
+<body>
+<nav class="hc-content-navbar">
+    <div class="nav-title">Documentation</div>
+    <a class="submit-ticket" href="https://support.vebto.com/help-center/tickets/new">Create a ticket</a>
+</nav>
+
+<div class="hc-content">
+    <div class="hc-sidenav left">
+            <h3 class="highlight-item introduction">Introduction</h3>
+        <ul>
+                            <li>
+                    <a href="../introduction/translations.html" class="highlight-item translations">Translations</a>
+                </li>
+                            <li>
+                    <a href="../introduction/interface.html" class="highlight-item interface">Interface</a>
+                </li>
+                            <li>
+                    <a href="../introduction/getting-started.html" class="highlight-item getting-started">Getting Started</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item configuration">Configuration</h3>
+        <ul>
+                            <li>
+                    <a href="../configuration/theming.html" class="highlight-item theming">Theming</a>
+                </li>
+                            <li>
+                    <a href="../configuration/filter-texture-size.html" class="highlight-item filter-texture-size">Filter Texture Size</a>
+                </li>
+                            <li>
+                    <a href="../configuration/cross-origin-images.html" class="highlight-item cross-origin-images">Cross Origin Images</a>
+                </li>
+                            <li>
+                    <a href="../configuration/specifying-base-url.html" class="highlight-item specifying-base-url">Specifying Base Url</a>
+                </li>
+                            <li>
+                    <a href="../configuration/default-settings.html" class="highlight-item default-settings">Default Settings</a>
+                </li>
+                            <li>
+                    <a href="../configuration/available-settings.html" class="highlight-item available-settings">Available Settings</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item examples">Examples</h3>
+        <ul>
+                            <li>
+                    <a href="../examples/resetting-editor.html" class="highlight-item resetting-editor">Resetting Editor</a>
+                </li>
+                            <li>
+                    <a href="../examples/watermarking-photos.html" class="highlight-item watermarking-photos">Watermarking Photos</a>
+                </li>
+                            <li>
+                    <a href="../examples/editor-as-overlay.html" class="highlight-item editor-as-overlay">Editor as Overlay</a>
+                </li>
+                            <li>
+                    <a href="../examples/opening-photos.html" class="highlight-item opening-photos">Opening Photos</a>
+                </li>
+                            <li>
+                    <a href="../examples/saving-to-server.html" class="highlight-item saving-to-server">Saving to Server</a>
+                </li>
+                            <li>
+                    <a href="../examples/loading-state.html" class="highlight-item loading-state">Loading State</a>
+                </li>
+                            <li>
+                    <a href="../examples/saving-state.html" class="highlight-item saving-state">Saving State</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item api-usage">API Usage</h3>
+        <ul>
+                            <li>
+                    <a href="../api-usage/general-api.html" class="highlight-item general-api">General API</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/import.html" class="highlight-item import">Import</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/using-tools.html" class="highlight-item using-tools">Using Tools</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/export.html" class="highlight-item export">Export</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/frame.html" class="highlight-item frame">Frame</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/stickers.html" class="highlight-item stickers">Stickers</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/shapes.html" class="highlight-item shapes">Shapes</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/text.html" class="highlight-item text">Text</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/draw.html" class="highlight-item draw">Draw</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/transform.html" class="highlight-item transform">Transform</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/crop.html" class="highlight-item crop">Crop</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/resize.html" class="highlight-item resize">Resize</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/filter.html" class="highlight-item filter">Filter</a>
+                </li>
+                            <li>
+                    <a href="../api-usage/history.html" class="highlight-item history">History</a>
+                </li>
+                    </ul>
+            <h3 class="highlight-item objects">Objects</h3>
+        <ul>
+                            <li>
+                    <a href="../objects/events.html" class="highlight-item events">Events</a>
+                </li>
+                            <li>
+                    <a href="../objects/active-object.html" class="highlight-item active-object">Active Object</a>
+                </li>
+                            <li>
+                    <a href="../objects/object-list.html" class="highlight-item object-list">Object List</a>
+                </li>
+                    </ul>
+    </div>    <div class="center">
+        <section class="article-container">
+            <h1 class="article-title">Import</h1>
+            <div class="article-body">
+                <p class="article-description">Import tool allows importing of photos and pixie state files into the editor. <br>For example, you can open file upload dialog and then import selected image like so:</p>
+<pre class="language-javascript"><code>pixie.getTool('import').openUploadDialog().then(function(obj) {
+    var size = pixie.getTool('canvas').state.original;
+    obj.set({width: size.width, height: size.height, top: 0, left: 0});
+});</code></pre>
+<h2 id="export-tool-methods"><a href="#export-tool-methods">Import tool methods</a></h2>
+<section class="tsd-panel-group tsd-member-group "><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="importandgetdata"></a>
+<h3 id="importltwbrgtandltwbrgtgetltwbrgtdata">import<wbr>And<wbr>Get<wbr>Data</wbr></wbr></wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">import<wbr>And<wbr>Get<wbr>Data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></wbr></wbr></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in pixie2/src/app/image-editor/tools/import-tool.service.ts:53</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Open upload dialog, import file and return files data.</p>
+</div>
+</div>
+<h4 id="returns-ltspan-classquottsd-signature-typequotgtpromiseltspangtltspan-classquottsd-signature-symbolquotgtltltspangtltspan-classquottsd-signature-typequotgtstringltspangtltspan-classquottsd-signature-symbolquotgtgtltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="openbackgroundimage"></a>
+<h3 id="openltwbrgtbackgroundltwbrgtimage">open<wbr>Background<wbr>Image</wbr></wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">open<wbr>Background<wbr>Image<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLImageElement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Image</span><span class="tsd-signature-symbol">&gt;</span></wbr></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in pixie2/src/app/image-editor/tools/import-tool.service.ts:109</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Open specified data or image as background image.</p>
+</div>
+</div>
+<h4 id="parameters" class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="data-ltspan-classquottsd-signature-typequotgtstringltspangtltspan-classquottsd-signature-symbolquotgt-ltspangtltspan-classquottsd-signature-typequotgthtmlimageelementltspangt">data: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLImageElement</span></h5>
+</li>
+</ul><h4 id="returns-ltspan-classquottsd-signature-typequotgtpromiseltspangtltspan-classquottsd-signature-symbolquotgtltltspangtltspan-classquottsd-signature-typequotgtimageltspangtltspan-classquottsd-signature-symbolquotgtgtltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Image</span><span class="tsd-signature-symbol">&gt;</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="openfile"></a>
+<h3 id="openltwbrgtfile">open<wbr>File</wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">open<wbr>File<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLImageElement</span>, extension<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Image</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in pixie2/src/app/image-editor/tools/import-tool.service.ts:96</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Open specified data or image element in editor.</p>
+</div>
+</div>
+<h4 id="parameters" class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="data-ltspan-classquottsd-signature-typequotgtstringltspangtltspan-classquottsd-signature-symbolquotgt-ltspangtltspan-classquottsd-signature-typequotgthtmlimageelementltspangt">data: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLImageElement</span></h5>
+</li>
+<li>
+<h5 id="ltspan-classquottsd-flag-ts-flagdefault-valuequotgtdefault-valueltspangt-extension-ltspan-classquottsd-signature-typequotgtstringltspangtltspan-classquottsd-signature-symbolquotgt-nbspquotpngquotltspangt"><span class="tsd-flag ts-flagDefault value">Default value</span> extension: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = "png"</span></h5>
+</li>
+</ul><h4 id="returns-ltspan-classquottsd-signature-typequotgtpromiseltspangtltspan-classquottsd-signature-symbolquotgtltltspangtltspan-classquottsd-signature-typequotgtimageltspangtltspan-classquottsd-signature-symbolquotgt-ltspangtltspan-classquottsd-signature-typequotgtvoidltspangtltspan-classquottsd-signature-symbolquotgtgtltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Image</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="openstatefile"></a>
+<h3 id="openltwbrgtstateltwbrgtfile">open<wbr>State<wbr>File</wbr></wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">open<wbr>State<wbr>File<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></wbr></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in pixie2/src/app/image-editor/tools/import-tool.service.ts:81</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Load specified pixie state data into editor.</p>
+</div>
+</div>
+<h4 id="parameters" class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="data-ltspan-classquottsd-signature-typequotgtstringltspangt">data: <span class="tsd-signature-type">string</span></h5>
+</li>
+</ul><h4 id="returns-ltspan-classquottsd-signature-typequotgtpromiseltspangtltspan-classquottsd-signature-symbolquotgtltltspangtltspan-classquottsd-signature-typequotgtanyltspangtltspan-classquottsd-signature-symbolquotgtgtltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="openuploaddialog"></a>
+<h3 id="openltwbrgtuploadltwbrgtdialog">open<wbr>Upload<wbr>Dialog</wbr></wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">open<wbr>Upload<wbr>Dialog<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></wbr></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in pixie2/src/app/image-editor/tools/import-tool.service.ts:34</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Open upload dialog, import selected file and open it in editor.</p>
+</div>
+</div>
+<h4 id="parameters" class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="ltspan-classquottsd-flag-ts-flagdefault-valuequotgtdefault-valueltspangt-options-ltspan-classquottsd-signature-typequotgtobjectltspangtltspan-classquottsd-signature-symbolquotgt-nbsptype-039image039ltspangt"><span class="tsd-flag ts-flagDefault value">Default value</span> options: <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> = {type: 'image'}</span></h5>
+<ul class="tsd-parameters"><li class="tsd-parameter">
+<h5 id="ltspan-classquottsd-flag-ts-flagoptionalquotgtoptionalltspangt-backgroundltwbrgtimageltspan-classquottsd-signature-symbolquotgt-ltspangtltspan-classquottsd-signature-typequotgtbooleanltspangt"><span class="tsd-flag ts-flagOptional">Optional</span> background<wbr>Image<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></wbr></h5>
+</li>
+<li class="tsd-parameter">
+<h5 id="ltspan-classquottsd-flag-ts-flagoptionalquotgtoptionalltspangt-typeltspan-classquottsd-signature-symbolquotgt-ltspangtltspan-classquottsd-signature-typequotgtquotimagequotltspangtltspan-classquottsd-signature-symbolquotgt-ltspangtltspan-classquottsd-signature-typequotgtquotstatequotltspangt"><span class="tsd-flag ts-flagOptional">Optional</span> type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">"image"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"state"</span></h5>
+</li>
+</ul></li>
+</ul><h4 id="returns-ltspan-classquottsd-signature-typequotgtpromiseltspangtltspan-classquottsd-signature-symbolquotgtltltspangtltspan-classquottsd-signature-typequotgtanyltspangtltspan-classquottsd-signature-symbolquotgtgtltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+</li>
+</ul></section><section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a class="tsd-anchor" name="validateandgetdata"></a>
+<h3 id="validateltwbrgtandltwbrgtgetltwbrgtdata">validate<wbr>And<wbr>Get<wbr>Data</wbr></wbr></wbr></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class"><li class="tsd-signature tsd-kind-icon">validate<wbr>And<wbr>Get<wbr>Data<span class="tsd-signature-symbol">(</span>file<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">File</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></wbr></wbr></wbr></li>
+</ul><ul class="tsd-descriptions"><li class="tsd-description">
+<aside class="tsd-sources"><ul><li>Defined in pixie2/src/app/image-editor/tools/import-tool.service.ts:64</li>
+</ul></aside><div class="tsd-comment tsd-typography">
+<div class="lead">
+<p>Validate specified file and if it passes, return files data.</p>
+</div>
+</div>
+<h4 id="parameters" class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameters"><li>
+<h5 id="file-ltspan-classquottsd-signature-typequotgtfileltspangt">file: <span class="tsd-signature-type">File</span></h5>
+</li>
+</ul><h4 id="returns-ltspan-classquottsd-signature-typequotgtpromiseltspangtltspan-classquottsd-signature-symbolquotgtltltspangtltspan-classquottsd-signature-typequotgtobjectltspangtltspan-classquottsd-signature-symbolquotgtgtltspangt" class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></h4>
+</li>
+</ul></section></section>
+            </div>
+        </section>
+    </div>
+    <div class="right article-content">
+        <h4>Content</h4>
+    </div>
+</div>
+</body>
+</html>
